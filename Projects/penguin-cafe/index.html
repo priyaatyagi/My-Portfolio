@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Penguin Cafe by Pihuu – a snowy, cosy cafe in Delhi</title>
+<meta name="description" content="A cute penguin-themed cafe and restaurant in Delhi. Book a table in 30 seconds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- soft blurred snowy background (made from your image) + falling snow -->
+<div class="bg" aria-hidden="true"></div>
+<canvas id="snow" aria-hidden="true"></canvas>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top"><img src="images/sign.jpg" alt="" width="44" height="44"> Penguin Cafe <small>by Pihuu</small></a>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#book" class="btn">Book a table</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-center">
+    <div class="peek-wrap">
+      <img class="peek" src="images/penguin-peek.png" alt="Cute penguin peeking from behind the heading" width="230" height="136">
+      <h1>Warm food,<br>cool little place.</h1>
+    </div>
+    <p>Penguin Cafe by Pihuu is a cute penguin cafe and restaurant in [Your area], Delhi. Snowy corners, happy plates and the best photo spots in town.</p>
+    <div class="cta">
+      <a class="btn" href="#book">Book a table</a>
+      <a class="btn white" href="#menu">See the menu</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="head">
+      <h2>Why you'll love it here</h2>
+      <p>Soft snow, good food and plenty of cute corners.</p>
+    </div>
+    <div class="exp">
+      <div class="glass"><span class="emoji">❄️</span><h3>Snowy interior</h3><p>Ice-blue corners made for photos.</p></div>
+      <div class="glass"><span class="emoji">☕</span><h3>Penguin menu</h3><p>Burgers, coffees and pancakes with a penguin twist.</p></div>
+      <div class="glass"><span class="emoji">🧸</span><h3>Kid friendly</h3><p>[Edit: describe your kids' area, if you have one.]</p></div>
+      <div class="glass"><span class="emoji">🎂</span><h3>Birthdays and dates</h3><p>[Edit: describe your decoration options.]</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="snowcap">Our little menu</h2>
+      <p>Four favourites to start with.</p>
+    </div>
+    <div class="items">
+      <article class="item"><img src="images/coffee.jpg" alt="Penguin in a blue hat holding an iced coffee"><div class="body"><h3>Penguin Cold Coffee</h3><p>Iced and creamy</p><span class="price">₹199</span></div></article>
+      <article class="item"><img src="images/burger.jpg" alt="Penguin chef holding a burger"><div class="body"><h3>Penguin Burger</h3><p>House special</p><span class="price">₹249</span></div></article>
+      <article class="item"><img src="images/pancakes.jpg" alt="Penguin in a yellow hat holding pancakes"><div class="body"><h3>Penguin Pancakes</h3><p>A stack of three</p><span class="price">₹179</span></div></article>
+      <article class="item"><img src="images/shake.jpg" alt="Penguin in red earmuffs holding a milkshake"><div class="body"><h3>Penguin Shake</h3><p>Thick and cold</p><span class="price">₹229</span></div></article>
+    </div>
+    <p class="note">Prices are samples. Replace them with your real menu.</p>
+  </div>
+</section>
+
+<section class="offer-sec">
+  <div class="wrap">
+    <div class="offer">
+      <img src="images/mascot-right.jpg" alt="Sleepy penguin lying in the snow" class="sleepy">
+      <div>
+        <h2>This week: a free Penguin Cold Coffee</h2>
+        <p>Book a table online and it's on us. [Edit or remove this offer.]</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap book">
+    <div class="info glass">
+      <h2>Book a table</h2>
+      <p>Four small details and you're set. We confirm on WhatsApp.</p>
+      <p><strong>Address</strong>[Your cafe address], Delhi</p>
+      <p><strong>Hours</strong>11 AM – 10 PM, every day</p>
+      <p><strong>WhatsApp</strong><a href="https://wa.me/91XXXXXXXXXX">+91 XXXXX XXXXX</a></p>
+    </div>
+
+    <form id="bookingForm" class="glass" novalidate>
+      <label>Name<input id="name" type="text" autocomplete="name" required></label>
+      <label>Phone number<input id="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="10-digit mobile number" required></label>
+      <label>Number of guests
+        <select id="guests">
+          <option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option><option>7+</option>
+        </select>
+      </label>
+      <label>Date and time<input id="when" type="datetime-local" required></label>
+      <p class="err" id="err" role="alert"></p>
+      <button class="btn" type="submit">Send booking on WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>© <span id="yr"></span> Penguin Cafe by Pihuu, Delhi</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* ---------- Page ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #d1d5db;                 /* light grey page */
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* ---------- Calculator body ---------- */
+.calculator {
+  width: min(340px, 92vw);
+  padding: 20px;
+  border-radius: 28px;
+  background: #2b2f36;                 /* charcoal body */
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- Display ---------- */
+.display {
+  min-height: 100px;
+  margin-bottom: 18px;
+  padding: 14px 18px;
+  border-radius: 18px;
+  background: #14171c;
+  color: #f9fafb;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.expression {
+  min-height: 20px;
+  font-size: 0.95rem;
+  color: #9ca3af;
+  word-break: break-all;
+}
+
+.result {
+  font-size: 2.5rem;
+  font-weight: 600;
+  word-break: break-all;
+}
+
+/* Error messages (e.g. divide by zero) use a smaller red font */
+.result.error {
+  font-size: 1.3rem;
+  color: #f87171;
+}
+
+/* ---------- Button grid (4 columns) ---------- */
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Every key is a perfect circle: equal width and height + 50% radius */
+.key {
+  aspect-ratio: 1 / 1;
+  border: none;
+  border-radius: 50%;
+  background: #6b7280;                 /* grey = numbers */
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.08s ease, filter 0.15s ease;
+}
+
+.key:hover  { filter: brightness(1.12); }
+.key:active { transform: scale(0.93); }
+.key:focus-visible { outline: 3px solid #fca5a5; outline-offset: 2px; }
+
+/* Red = symbols (AC, DEL, %, ÷, ×, −, +) */
+.key.fn,
+.key.op { background: #dc2626; font-weight: 600; }
+
+/* Equals key: deeper red so it stands out */
+.key.eq { background: #991b1b; font-weight: 700; }
+
+@media (prefers-reduced-motion: reduce) {
+  .key { transition: none; }
+}

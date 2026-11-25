@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skills | Priya Tyagi</title>
+  <meta name="description" content="Portfolio of Priya Tyagi, BCA student and aspiring web developer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Manrope:wght@400;500;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">Priya<span> Tyagi</span></a>
+    <nav id="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="about.html">About me</a>
+      <a href="skills.html" aria-current="page">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button id="themeBtn" class="icon-btn" aria-label="Switch to dark theme">Dark</button>
+      <button id="menuBtn" class="icon-btn menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="chart" role="img" aria-label="Bar graph of skill levels: HTML 80%, CSS 75%, JavaScript 65%, MATLAB 50%">
+        <div class="y-axis"><span>100%</span><span>75%</span><span>50%</span><span>25%</span><span>0%</span></div>
+        <div class="plot">
+          <div class="col"><span class="val">80%</span><div class="vbar" data-level="80"></div></div>
+          <div class="col"><span class="val">75%</span><div class="vbar" data-level="75"></div></div>
+          <div class="col"><span class="val">65%</span><div class="vbar" data-level="65"></div></div>
+          <div class="col"><span class="val">50%</span><div class="vbar" data-level="50"></div></div>
+        </div>
+        <div></div>
+        <div class="names"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>MATLAB</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Priya Tyagi. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
